@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">DopeStrobe</string>
 
+    <string name="color_select">PICK A COLOR</string>
+    <string name="plus"> + </string>
+    <string name="screen_start">AND TRY THIS</string>
+    <string name="led_start">OR START FLASHING</string>
+    <string name="start"> START </string>
+    <string name="led"> LED </string>
+    <string name="dope"> DOPE </string>
+    <string name="strobe"> STROBE </string>
+    <string name="square">&#9632; &#9632; &#9632;</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_color">ColorActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

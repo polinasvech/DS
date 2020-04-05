@@ -21,31 +21,155 @@
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            android:visibility="visible"
-            tools:ignore="UselessParent">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center_vertical"
+                android:minLines="2"
+                android:text="@string/color_select"
+                android:textColor="@android:color/white"
+                android:textSize="45sp" />
 
             <Button
-                android:id="@+id/dummy_button"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnColor"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/plus"
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bntScreen"
+                android:layout_width="259dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape"
+                android:fontFamily="sans-serif-thin"
+                android:maxLines="1"
+                android:text="@string/start"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/txtScreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:fontFamily="sans-serif-thin"
+                android:minLines="2"
+                android:text="@string/screen_start"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textSize="45sp" />
 
         </LinearLayout>
-    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDope"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="@string/dope"
+                android:textAlignment="textEnd"
+                android:textColor="@color/dope"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/txtStrobe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="@string/strobe"
+                android:textAlignment="textStart"
+                android:textColor="@color/strobe"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtLed"
+                android:layout_width="86dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:minLines="2"
+                android:text="@string/led_start"
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btLed"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/led"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/sbLed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:progressTint="@android:color/white"
+                android:thumbTint="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>
